@@ -1,0 +1,33 @@
+---
+import { Icon } from 'astro-icon/components';
+import { cn } from '@/utils';
+
+import { routes } from './routes';
+
+interface Props {
+	sideBarActiveItemID: string;
+}
+
+const { sideBarActiveItemID } = Astro.props;
+
+const activeClass = 'glass';
+---
+
+<ul class="menu menu-md w-full shrink grow space-y-2 overflow-y-auto px-5">
+	{
+		routes.map((route) => (
+			<li class="">
+				<a
+					href={route.href}
+					id={route.id}
+					class={cn(
+						`flex justify-between rounded bg-white/30 py-3 hover:bg-white/50 dark:bg-black/30 dark:hover:bg-white/10 ${route.id === sideBarActiveItemID && activeClass}`
+					)}
+				>
+					{route.label}
+					{route.icon && <Icon name={route.icon} />}
+				</a>
+			</li>
+		))
+	}
+</ul>

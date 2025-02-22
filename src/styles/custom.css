@@ -1,0 +1,57 @@
+/* @reference 'tailwindcss' */
+
+@property --slant {
+	syntax: '<percentage>';
+	inherits: false;
+	initial-value: 55%;
+}
+
+.glass {
+	transition: --slant 0.2s ease-in-out;
+	/* transition: --slant 0.5s; */
+	border: none;
+	backdrop-filter: blur(var(--glass-blur, 40px));
+	background-color: #0000;
+	background-image:
+		linear-gradient(
+			112deg,
+			oklch(100% 0 0 / var(--glass-opacity, 30%)) 0%,
+			oklch(0% 0 0 / 0%) 100%
+		),
+		linear-gradient(
+			var(--glass-reflect-degree, 10deg),
+			oklch(100% 0 0 / var(--glass-reflect-opacity, 5%)) 25%,
+			oklch(0% 0 0 / 0%) var(--slant)
+		);
+	box-shadow:
+		0 0 0 1px oklch(100% 0 0 / var(--glass-border-opacity, 20%)) inset,
+		0 0 0 2px oklch(0% 0 0 / 5%);
+	text-shadow: 0 1px oklch(0% 0 0 / var(--glass-text-shadow-opacity, 5%));
+	&:hover {
+		--slant: 200%;
+		transition: --slant 1s ease-out;
+		@apply bg-white/30 dark:bg-white/5;
+	}
+}
+
+@property --op {
+	syntax: '<number>';
+	inherits: false;
+	initial-value: 0.1;
+}
+.glass-subtle {
+	--glass-opacity: var(--op);
+	transition: --op 0.5s;
+	@apply glass;
+	&:hover {
+		--op: 0.3;
+	}
+}
+
+/* SIDEBAR */
+.sidebar-bg {
+	@apply relative z-0 blur;
+	background-image:
+		linear-gradient(to bottom, var(--overlay-base), var(--overlay-base)),
+		url('/img/rkt_bg.jpeg');
+}

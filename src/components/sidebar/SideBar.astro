@@ -1,0 +1,26 @@
+---
+import SideBarMenu from './SideBarMenu.astro';
+
+interface Props {
+	sideBarActiveItemID: string;
+}
+
+const { sideBarActiveItemID } = Astro.props;
+---
+
+<div class="drawer-side z-40">
+	<label for="my-drawer" class="drawer-overlay"></label>
+
+	<aside
+		class="bg-base-200 text-base-content relative flex h-auto min-h-full w-[16rem] flex-col bg-right px-2 pt-2"
+	>
+		<div class="my-20 text-center">
+			<h5>Playground Title</h5>
+		</div>
+
+		<!-- LINKS -->
+		<div class="w-full">
+			<SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
+		</div>
+	</aside>
+</div>
