@@ -1,5 +1,3 @@
-# A starter kit for Astro featuring Tailwind, DaisyUI, Dark/Light Theme toggle + Typescript
+# A code repo for all my submissions to the Frontend Mentor challenges
 
-A starter I use as the basis for all my Astro projects. Feel free to use it in yours by cloning this project.
-
-More detailed Readme to come...
+More detailed readme to come.
