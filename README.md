@@ -1,6 +1,6 @@
 # Frontend Mentor Challenges 🚀
 
-Welcome to my **Frontend Mentor Challenges** repository! 🎨📱💻 This repo contains solutions to various coding challenges from [Frontend Mentor](https://www.frontendmentor.io/). V
+Welcome to my **Frontend Mentor Challenges** repository! 🎨📱💻 This repo contains solutions to various coding challenges from [Frontend Mentor](https://www.frontendmentor.io/).
 
 View it live @ https://front-end-challenges.pages.dev/
 
