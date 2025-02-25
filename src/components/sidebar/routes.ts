@@ -13,4 +13,34 @@ export const routes: Route[] = [
 		label: 'Home',
 		icon: 'home',
 	},
+	{
+		href: '/newbie',
+		id: 'newbie',
+		label: 'Newbie',
+		icon: 'newbie',
+	},
+	{
+		href: '/junior',
+		id: 'junior',
+		label: 'Junior',
+		icon: 'junior',
+	},
+	{
+		href: '/intermediate',
+		id: 'intermediate',
+		label: 'Intermediate',
+		icon: 'intermediate',
+	},
+	{
+		href: '/advanced',
+		id: 'advanced',
+		label: 'Advanced',
+		icon: 'advanced',
+	},
+	{
+		href: '/guru',
+		id: 'guru',
+		label: 'Guru',
+		icon: 'guru',
+	},
 ];
