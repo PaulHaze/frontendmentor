@@ -1,0 +1,35 @@
+src
+├── assets
+│   └── icons
+│       ├── astro-icon-dark.svg
+│       ├── astro-icon-light.svg
+│       ├── coffee.svg
+│       ├── github.svg
+│       ├── home.svg
+│       ├── linkedin.svg
+│       └── twitter.svg
+├── components
+│   ├── index.ts
+│   ├── layout
+│   │   └── BaseHead.astro
+│   ├── sidebar
+│   │   ├── SideBar.astro
+│   │   ├── SideBarMenu.astro
+│   │   └── routes.ts
+│   └── ui
+│       ├── Header.astro
+│       └── ThemeToggle.astro
+├── config.ts
+├── env.d.ts
+├── layouts
+│   └── Layout.astro
+├── pages
+│   └── index.astro
+├── styles
+│   ├── custom.css
+│   └── main.css
+└── utils
+    ├── clsxm.ts
+    └── index.ts
+
+11 directories, 22 files
