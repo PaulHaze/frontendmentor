@@ -13,7 +13,7 @@ const { sideBarActiveItemID } = Astro.props;
 const activeClass = 'glass';
 ---
 
-<ul class="menu menu-md w-full shrink grow space-y-2 overflow-y-auto px-5">
+<ul class="menu menu-md w-full shrink grow space-y-3 overflow-y-auto px-2">
 	{
 		routes.map((route) => (
 			<li class="">
@@ -21,11 +21,11 @@ const activeClass = 'glass';
 					href={route.href}
 					id={route.id}
 					class={cn(
-						`flex justify-between rounded bg-white/30 py-3 hover:bg-white/50 dark:bg-black/30 dark:hover:bg-white/10 ${route.id === sideBarActiveItemID && activeClass}`
+						`flex justify-between rounded-lg bg-white/30 py-4 text-lg hover:bg-white/50 dark:bg-black/30 dark:hover:bg-white/10 ${route.id === sideBarActiveItemID && activeClass}`
 					)}
 				>
 					{route.label}
-					{route.icon && <Icon name={route.icon} />}
+					{route.icon && <Icon size={28} name={route.icon} />}
 				</a>
 			</li>
 		))
