@@ -4,17 +4,23 @@ import react from '@astrojs/react';
 
 import icon from 'astro-icon';
 
+import cloudflare from '@astrojs/cloudflare';
+
 // https://astro.build/config
 export default defineConfig({
-	vite: { plugins: [tailwindcss()] },
-	integrations: [
-		react(),
-		icon({
-			iconDir: 'src/assets/icons',
-		}),
+  vite: { plugins: [tailwindcss()] },
+
+  integrations: [
+      react(),
+      icon({
+          iconDir: 'src/assets/icons',
+      }),
 	],
-	experimental: {
-		responsiveImages: true,
-		svg: true,
+
+  experimental: {
+      responsiveImages: true,
+      svg: true,
 	},
+
+  adapter: cloudflare(),
 });
