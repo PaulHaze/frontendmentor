@@ -37,7 +37,7 @@ import '@/styles/main.css';
 		<div class="drawer lg:drawer-open">
 			<input id="my-drawer" type="checkbox" class="drawer-toggle" />
 			<div class="drawer-content bg-base-100 flex min-h-screen flex-col">
-				<Header title={SITE_TITLE} />
+				<Header title={sideBarActiveItemID} />
 				<main class="max-w-sxl mx-auto">
 					<slot />
 				</main>
