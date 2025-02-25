@@ -2,7 +2,8 @@
 
 @import './custom.css';
 
-@variant dark (&:where([data-theme= 'dark'] *));
+@variant dark (&:where([data-theme='dark'] *));
+@variant light (&:where([data-theme='light'] *));
 
 @theme inline {
 	/* Custom Fonts */
@@ -92,6 +93,14 @@
 	}
 	.bg-error * {
 		@apply text-error-content;
+	}
+}
+
+@layer utilities {
+	.menu {
+		@variant light {
+			--menu-active-bg: color-mix(in oklch, var(--color-neutral) 20%, white);
+		}
 	}
 }
 

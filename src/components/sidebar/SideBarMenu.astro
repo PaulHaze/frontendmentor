@@ -13,7 +13,7 @@ const { sideBarActiveItemID } = Astro.props;
 const activeClass = 'dark:glass bg-white border-black ring ring-stone-700/50';
 ---
 
-<ul class="menu menu-md w-full shrink grow space-y-3 overflow-y-auto px-2">
+<ul class="menu w-full space-y-3 overflow-y-auto px-2">
 	{
 		routes.map((route) => (
 			<li class="">
@@ -21,7 +21,7 @@ const activeClass = 'dark:glass bg-white border-black ring ring-stone-700/50';
 					href={route.href}
 					id={route.id}
 					class={cn(
-						`bg-base-100/70 active:bg-base-300 flex justify-between overflow-hidden rounded-lg py-4 text-lg hover:bg-white/50 dark:bg-black/30 dark:hover:bg-white/10 ${route.id === sideBarActiveItemID && activeClass}`
+						`bg-base-100/70 flex justify-between overflow-hidden rounded-lg py-4 text-lg hover:bg-white/50 active:bg-white dark:bg-black/30 dark:hover:bg-white/10 ${route.id === sideBarActiveItemID && activeClass}`
 					)}
 				>
 					{route.label}
