@@ -1,6 +1,6 @@
-import newbie_001 from '/src/assets/images/newbie_001.jpg';
-import newbie_002 from '/src/assets/images/newbie_002.jpg';
-import newbie_003 from '/src/assets/images/newbie_003.jpg';
+import newbie_001 from '/src/assets/img/challenges/newbie_001.jpg';
+import newbie_002 from '/src/assets/img/challenges/newbie_002.jpg';
+import newbie_003 from '/src/assets/img/challenges/newbie_003.jpg';
 
 type ISODateString = `${number}-${number}-${number}`;
 
