@@ -18,7 +18,9 @@ export default [
 		plugins: {
 			// additional plugins
 		},
-		rules: {},
+		rules: {
+			'@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+		},
 	},
 	{
 		// override/add rules settings here, such as:
