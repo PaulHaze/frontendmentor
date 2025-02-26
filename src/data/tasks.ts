@@ -1,59 +1,71 @@
-type Task = {
+import newbieImage001 from '/src/assets/images/newbie_001.jpg';
+import newbieImage002 from '/src/assets/images/newbie_002.jpg';
+import newbieImage003 from '/src/assets/images/newbie_003.jpg';
+
+type ISODateString = `${number}-${number}-${number}`;
+
+type Challenge = {
 	id: string;
+	difficulty: 'newbie' | 'junior' | 'intermediate' | 'advanced' | 'guru';
 	slug: string;
 	title: string;
 	description: string;
-	difficulty: string;
-	date: string;
-	thumImg: string;
-	coverImg: string;
+	date: ISODateString;
+	thumbImg?: string;
+	coverImg: ImageMetadata;
 	githubUrl: string;
 	figmaUrl: string;
 	liveUrl: string;
 	projectUrl: string;
 };
 
-export const tasks: Task[] = [
+export const challenges: Challenge[] = [
 	{
-		id: '1',
-		slug: 'task-1',
-		title: 'Task 1',
-		description: 'Task 1 description',
-		difficulty: 'easy',
-		date: '2021-10-01',
-		thumImg: '/images/thum-1.jpg',
-		coverImg: '/images/cover-1.jpg',
-		githubUrl: 'https://github.com',
+		id: 'newbie_001',
+		difficulty: 'newbie',
+		slug: 'recipe-page',
+		title: 'Recipe Page',
+		description:
+			'Build out a responsive recipe page and get it looking as close to the design as possible.',
+		date: '2025-02-26',
+		thumbImg: 'src/assets/images/newbie_001.jpg',
+		coverImg: newbieImage001,
+		githubUrl: 'https://github.com/PaulHaze/frontendmentor',
 		figmaUrl: 'https://figma.com',
-		liveUrl: 'https://live.com',
-		projectUrl: 'https://project.com',
+		liveUrl: 'https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm',
+		projectUrl:
+			'https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm',
 	},
 	{
-		id: '2',
-		slug: 'task-2',
-		title: 'Task 2',
-		description: 'Task 2 description',
-		difficulty: 'medium',
-		date: '2021-10-02',
-		thumImg: '/images/thum-2.jpg',
-		coverImg: '/images/cover-2.jpg',
-		githubUrl: 'https://github.com',
+		id: 'newbie_002',
+		difficulty: 'newbie',
+		slug: 'recipe-page',
+		title: 'Recipe Page',
+		description:
+			'Build out a responsive recipe page and get it looking as close to the design as possible.',
+		date: '2025-02-26',
+		thumbImg: 'src/assets/images/newbie_002.jpg',
+		coverImg: newbieImage002,
+		githubUrl: 'https://github.com/PaulHaze/frontendmentor',
 		figmaUrl: 'https://figma.com',
-		liveUrl: 'https://live.com',
-		projectUrl: 'https://project.com',
+		liveUrl: 'https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm',
+		projectUrl:
+			'https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm',
 	},
 	{
-		id: '3',
-		slug: 'task-3',
-		title: 'Task 3',
-		description: 'Task 3 description',
-		difficulty: 'hard',
-		date: '2021-10-03',
-		thumImg: '/images/thum-3.jpg',
-		coverImg: '/images/cover-3.jpg',
-		githubUrl: 'https://github.com',
+		id: 'newbie_003',
+		difficulty: 'newbie',
+		slug: 'recipe-page',
+		title: 'Recipe Page',
+		description:
+			'Build out a responsive recipe page and get it looking as close to the design as possible.',
+		date: '2025-02-26',
+		thumbImg: 'src/assets/images/newbie_003.jpg',
+		coverImg: newbieImage003,
+		githubUrl: 'https://github.com/PaulHaze/frontendmentor',
 		figmaUrl: 'https://figma.com',
-		liveUrl: 'https://live.com',
-		projectUrl: 'https://project.com',
+		liveUrl: 'https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm',
+		projectUrl:
+			'https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm',
 	},
 ];
