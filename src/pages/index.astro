@@ -13,9 +13,11 @@ import { challenges } from '@/data/challenges';
 			>
 				{
 					challenges.map((challenge) => (
-						<div class="flex-center size-60 bg-sky-700">
-							<h4 class="">{challenge.title}</h4>
-						</div>
+						<a href={`/${challenge.difficulty}/${challenge.slug}`}>
+							<div class="flex-center size-60 bg-sky-700">
+								<h4 class="">{challenge.title}</h4>
+							</div>
+						</a>
 					))
 				}
 			</div>
