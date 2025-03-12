@@ -50,8 +50,12 @@
 
 /* SIDEBAR */
 .sidebar-bg {
-	@apply relative z-0 blur;
-	background-image:
-		linear-gradient(to bottom, var(--overlay-base), var(--overlay-base)),
-		url('/img/rkt_bg.jpeg');
+	@apply relative overflow-hidden;
+	&::after {
+		content: '';
+		@apply absolute top-0 right-0 bottom-0 left-0 -z-10 bg-cover bg-right blur-xs;
+		background-image:
+			linear-gradient(to bottom, var(--overlay-base), var(--overlay-base)),
+			url('/img/rkt_bg.jpeg');
+	}
 }
