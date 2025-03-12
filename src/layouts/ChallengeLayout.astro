@@ -1,0 +1,27 @@
+---
+import Layout from '@/layouts/Layout.astro';
+const { difficulty } = Astro.props;
+---
+
+<Layout sideBarActiveItemID={difficulty}>
+	<div class="">
+		<div class="bg-base-300 flex-center h-20 w-full space-x-4">
+			<div
+				class="bg-secondary flex-center text-content aspect-square size-8 rounded"
+			>
+				XL
+			</div>
+			<div
+				class="bg-secondary text-content flex-center aspect-square size-8 rounded border"
+			>
+				M
+			</div>
+			<div
+				class="bg-secondary text-content flex-center aspect-square size-8 rounded border"
+			>
+				S
+			</div>
+		</div>
+		<slot />
+	</div>
+</Layout>
