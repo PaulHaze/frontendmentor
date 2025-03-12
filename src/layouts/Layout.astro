@@ -10,10 +10,14 @@ import { ClientRouter } from 'astro:transitions';
 
 import { SITE_TITLE, SITE_DESCRIPTION, TRANSITION_API } from '@/config';
 
+import { cn } from '@/utils';
+
 interface Props {
 	image?: string;
 	title?: string;
 	description?: string;
+	showHeader?: boolean;
+	showSidebar?: boolean;
 	sideBarActiveItemID: string;
 }
 
@@ -22,6 +26,8 @@ const {
 	title = SITE_TITLE,
 	description = SITE_DESCRIPTION,
 	sideBarActiveItemID,
+	showHeader = true,
+	showSidebar = true,
 } = Astro.props;
 
 import '@/styles/main.css';
@@ -37,12 +43,14 @@ import '@/styles/main.css';
 		<div class="drawer lg:drawer-open">
 			<input id="my-drawer" type="checkbox" class="drawer-toggle" />
 			<div class="drawer-content bg-base-100 flex min-h-screen flex-col">
-				<Header title={sideBarActiveItemID} />
+				<div class={cn(!showHeader && 'hidden')}>
+					<Header title={sideBarActiveItemID} />
+				</div>
 				<main class="mx-auto">
 					<slot />
 				</main>
 			</div>
-			<SideBar sideBarActiveItemID={sideBarActiveItemID} />
+			{showSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}
 		</div>
 	</body>
 </html>

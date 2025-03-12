@@ -3,7 +3,7 @@ import Layout from '@/layouts/Layout.astro';
 const { difficulty } = Astro.props;
 ---
 
-<Layout sideBarActiveItemID={difficulty}>
+<Layout sideBarActiveItemID={difficulty} showHeader={false} showSidebar={false}>
 	<div class="">
 		<div class="bg-base-300 flex-center h-20 w-full space-x-4">
 			<div
