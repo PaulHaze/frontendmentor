@@ -1,5 +1,5 @@
 ---
-import Layout from '@/layouts/Layout.astro';
+import ChallengeLayout from '@/layouts/ChallengeLayout.astro';
 import { challenges } from '@/data/challenges.ts';
 
 // const staticPathsArray = challenges.map((challenge) => {
@@ -30,10 +30,10 @@ const { title, description } = Astro.props;
 export const prerender = true;
 ---
 
-<Layout sideBarActiveItemID={difficulty}>
+<ChallengeLayout difficulty={difficulty}>
 	<div class="flex-center flex-col space-y-4 px-10">
 		<h1>Title: {title}</h1>
 		<h2 class="text-center">{description}</h2>
 		<h3>Difficulty: {difficulty}</h3>
 	</div>
-</Layout>
+</ChallengeLayout>
