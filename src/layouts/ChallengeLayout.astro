@@ -5,22 +5,26 @@ const { difficulty } = Astro.props;
 
 <Layout sideBarActiveItemID={difficulty} showHeader={false} showSidebar={false}>
 	<div class="">
-		<div class="bg-base-300 flex-center h-20 w-full space-x-4">
-			<div
-				class="bg-secondary flex-center text-content aspect-square size-8 rounded"
-			>
-				XL
+		<div class="bg-base-300 flex h-20 w-full items-center justify-between">
+			<button class="cursor-pointer" onclick="history.back()">Go Back</button>
+			<div class="flex space-x-4">
+				<div
+					class="bg-secondary flex-center text-content aspect-square size-8 rounded"
+				>
+					XL
+				</div>
+				<div
+					class="bg-secondary text-content flex-center aspect-square size-8 rounded border"
+				>
+					M
+				</div>
+				<div
+					class="bg-secondary text-content flex-center aspect-square size-8 rounded border"
+				>
+					S
+				</div>
 			</div>
-			<div
-				class="bg-secondary text-content flex-center aspect-square size-8 rounded border"
-			>
-				M
-			</div>
-			<div
-				class="bg-secondary text-content flex-center aspect-square size-8 rounded border"
-			>
-				S
-			</div>
+			<div class="">toggle</div>
 		</div>
 		<slot />
 	</div>
