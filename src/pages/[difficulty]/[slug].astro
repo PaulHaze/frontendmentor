@@ -1,0 +1,28 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { challenges } from '@/data/challenges.ts';
+
+const staticPathsArray = challenges.map((challenge) => {
+	return {
+		params: {
+			difficulty: challenge.difficulty,
+			slug: challenge.slug,
+		},
+		props: { title: challenge.title, description: challenge.description },
+	};
+});
+
+export function getStaticPaths() {
+	return staticPathsArray;
+}
+
+const { difficulty, slug } = Astro.params;
+const { title, description } = Astro.props;
+---
+
+<Layout sideBarActiveItemID={difficulty}>
+	<h1>{title}</h1>
+	<h2>{description}</h2>
+	<h1>{difficulty}</h1>
+	<h2>{slug}</h2>
+</Layout>
