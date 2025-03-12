@@ -9,13 +9,13 @@ import { challenges } from '@/data/challenges';
 		<div class="flex-center w-full flex-col">
 			<h1 class="mb-10 font-bold tracking-tight">Frontend Mentor Playground</h1>
 			<div
-				class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:w-full md:grid-cols-3 md:place-items-center"
+				class="max-w-sxl grid grid-cols-1 gap-2 sm:grid-cols-2 md:w-full md:grid-cols-3 md:place-items-center md:px-10 lg:px-8"
 			>
 				{
 					challenges.map((challenge) => (
 						<a href={`/${challenge.difficulty}/${challenge.slug}/details`}>
-							<div class="flex-center size-60 bg-sky-700">
-								<h4 class="">{challenge.title}</h4>
+							<div class="flex-center bg-primary dark:glass-subtle size-60">
+								<h4 class="dark:text-white/70">{challenge.title}</h4>
 							</div>
 						</a>
 					))

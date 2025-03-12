@@ -16,6 +16,8 @@ export function getStaticPaths() {
 }
 
 const { difficulty } = Astro.params;
+
+export const prerender = true;
 ---
 
 <ChallengeLayout difficulty={difficulty}>

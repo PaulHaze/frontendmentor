@@ -1,7 +1,6 @@
 @import 'tailwindcss';
 
 @import './custom.css';
-@source './custom.css';
 
 @variant dark (&:where([data-theme='dark'] *));
 @variant light (&:where([data-theme='light'] *));
@@ -105,6 +104,19 @@
 	}
 }
 
+@property --op {
+	syntax: '<number>';
+	inherits: false;
+	initial-value: 0.1;
+}
+@utility glass-subtle {
+	--glass-opacity: var(--op);
+	transition: --op 0.5s;
+	@apply glass;
+	&:hover {
+		--op: 0.3;
+	}
+}
 @utility bb {
 	@apply border border-red-600 sm:border-blue-600 md:border-green-600 lg:border-indigo-600 xl:border-pink-600;
 }
@@ -113,10 +125,6 @@
 }
 @utility flex-center {
 	@apply flex items-center justify-center;
-}
-
-.custom-dark {
-	background-color: green;
 }
 
 @plugin "@tailwindcss/typography";
