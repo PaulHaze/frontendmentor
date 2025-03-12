@@ -1,16 +1,6 @@
 ---
-import ChallengeLayout from '@/layouts/ChallengeLayout.astro';
+import Layout from '@/layouts/Layout.astro';
 import { challenges } from '@/data/challenges.ts';
-
-// const staticPathsArray = challenges.map((challenge) => {
-// 	return {
-// 		params: {
-// 			difficulty: challenge.difficulty,
-// 			slug: challenge.slug,
-// 		},
-// 		props: { title: challenge.title, description: challenge.description },
-// 	};
-// });
 
 export function getStaticPaths() {
 	return challenges.map((challenge) => {
@@ -24,16 +14,19 @@ export function getStaticPaths() {
 	});
 }
 
-const { difficulty } = Astro.params;
+const { difficulty, slug } = Astro.params;
 const { title, description } = Astro.props;
 
 export const prerender = true;
 ---
 
-<ChallengeLayout difficulty={difficulty}>
+<Layout sideBarActiveItemID={difficulty}>
 	<div class="flex-center flex-col space-y-4 px-10">
 		<h1>Title: {title}</h1>
 		<h2 class="text-center">{description}</h2>
 		<h3>Difficulty: {difficulty}</h3>
+		<div class="">
+			<a href={`/${difficulty}/${slug}/output`} class="btn btn-accent">VIEW</a>
+		</div>
 	</div>
-</ChallengeLayout>
+</Layout>

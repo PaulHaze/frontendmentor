@@ -1,0 +1,25 @@
+---
+import ChallengeLayout from '@/layouts/ChallengeLayout.astro';
+
+import { challenges } from '@/data/challenges.ts';
+
+export function getStaticPaths() {
+	return challenges.map((challenge) => {
+		return {
+			params: {
+				difficulty: challenge.difficulty,
+				slug: challenge.slug,
+			},
+			props: { title: challenge.title, description: challenge.description },
+		};
+	});
+}
+
+const { difficulty } = Astro.params;
+---
+
+<ChallengeLayout difficulty={difficulty}>
+	<div class="flex-center flex-col space-y-4 px-10">
+		<h1>OUTPUT</h1>
+	</div>
+</ChallengeLayout>
