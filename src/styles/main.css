@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 
 @import './custom.css';
+@source './custom.css';
 
 @variant dark (&:where([data-theme='dark'] *));
 @variant light (&:where([data-theme='light'] *));
@@ -112,6 +113,10 @@
 }
 @utility flex-center {
 	@apply flex items-center justify-center;
+}
+
+.custom-dark {
+	background-color: green;
 }
 
 @plugin "@tailwindcss/typography";
