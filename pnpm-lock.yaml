@@ -19,13 +19,13 @@ importers:
         version: 4.2.1(@types/node@22.13.4)(@types/react-dom@19.0.4(@types/react@19.0.10))(@types/react@19.0.10)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.85.0)(yaml@2.7.0)
       '@fontsource-variable/noto-sans':
         specifier: ^5.1.1
-        version: 5.2.5
+        version: 5.2.6
       '@fontsource/anton':
         specifier: ^5.1.1
         version: 5.2.5
       '@tailwindcss/vite':
         specifier: ^4.0.8
-        version: 4.0.12(vite@6.2.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.85.0)(yaml@2.7.0))
+        version: 4.0.12(vite@6.2.1(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.85.0)(yaml@2.7.0))
       '@types/react':
         specifier: ^19.0.10
         version: 19.0.10
@@ -795,8 +795,8 @@ packages:
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
 
-  '@fontsource-variable/noto-sans@5.2.5':
-    resolution: {integrity: sha512-eH6AxZEtLAq7AaqDK642UnIu/dsfNPkgUdDxX8aGGFOhw4h+J1MpWxk03sehzQvxgXw2lCprmoz0AFfvSpYNYQ==}
+  '@fontsource-variable/noto-sans@5.2.6':
+    resolution: {integrity: sha512-50Fqbqxctchje/HIbzNMy3h8RATVyQY3BkjPeUNvKIq2vKTOR5KxF728kpDT9CZInEyPtfAGy80ex/omLAxz1A==}
 
   '@fontsource/anton@5.2.5':
     resolution: {integrity: sha512-nrydB9HkZiFN7VaFwSFnJW9BhrRmbt1/2sb7wm8pw0OQ3tWzfIKDG634qv6kX1047SCP/037qhWX+Eoh+oxLGA==}
@@ -1387,6 +1387,9 @@ packages:
 
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
+
+  '@types/estree@1.0.7':
+    resolution: {integrity: sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ==}
 
   '@types/hast@3.0.4':
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
@@ -4730,7 +4733,7 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
-  '@fontsource-variable/noto-sans@5.2.5': {}
+  '@fontsource-variable/noto-sans@5.2.6': {}
 
   '@fontsource/anton@5.2.5': {}
 
@@ -5171,13 +5174,13 @@ snapshots:
       postcss-selector-parser: 6.0.10
       tailwindcss: 4.0.12
 
-  '@tailwindcss/vite@4.0.12(vite@6.2.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.85.0)(yaml@2.7.0))':
+  '@tailwindcss/vite@4.0.12(vite@6.2.1(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.85.0)(yaml@2.7.0))':
     dependencies:
       '@tailwindcss/node': 4.0.12
       '@tailwindcss/oxide': 4.0.12
       lightningcss: 1.29.2
       tailwindcss: 4.0.12
-      vite: 6.2.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.85.0)(yaml@2.7.0)
+      vite: 6.2.1(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.85.0)(yaml@2.7.0)
 
   '@trysound/sax@0.2.0': {}
 
@@ -5210,11 +5213,14 @@ snapshots:
 
   '@types/eslint@9.6.1':
     dependencies:
-      '@types/estree': 1.0.6
+      '@types/estree': 1.0.7
       '@types/json-schema': 7.0.15
     optional: true
 
   '@types/estree@1.0.6': {}
+
+  '@types/estree@1.0.7':
+    optional: true
 
   '@types/hast@3.0.4':
     dependencies:
