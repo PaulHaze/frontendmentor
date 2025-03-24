@@ -25,7 +25,7 @@ importers:
         version: 5.2.5
       '@tailwindcss/vite':
         specifier: ^4.0.8
-        version: 4.0.12(vite@6.2.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.85.0)(yaml@2.7.0))
+        version: 4.0.12(vite@6.2.1(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.85.0)(yaml@2.7.0))
       '@types/react':
         specifier: ^19.0.10
         version: 19.0.10
@@ -42,8 +42,8 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       daisyui:
-        specifier: 5.0.0
-        version: 5.0.0
+        specifier: 5.0.9
+        version: 5.0.9
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -1388,6 +1388,9 @@ packages:
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
+  '@types/estree@1.0.7':
+    resolution: {integrity: sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ==}
+
   '@types/hast@3.0.4':
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
 
@@ -1854,8 +1857,8 @@ packages:
   csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
 
-  daisyui@5.0.0:
-    resolution: {integrity: sha512-U0K9Bac3Bi3zZGm6ojrw12F0vBHTpEgf46zv/BYxLe07hF0Xnx7emIQliwaRBgJuYhY0BhwQ6wSnq5cJXHA2yA==}
+  daisyui@5.0.9:
+    resolution: {integrity: sha512-RsaehHh45f+0shWgZZaOY09/8eOae2voRsqJCD71j9yrnYgcke0Nj5ys0ZxrW4SPcc4+q96kWyJu0Z8P1zZdoA==}
 
   damerau-levenshtein@1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
@@ -5171,13 +5174,13 @@ snapshots:
       postcss-selector-parser: 6.0.10
       tailwindcss: 4.0.12
 
-  '@tailwindcss/vite@4.0.12(vite@6.2.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.85.0)(yaml@2.7.0))':
+  '@tailwindcss/vite@4.0.12(vite@6.2.1(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.85.0)(yaml@2.7.0))':
     dependencies:
       '@tailwindcss/node': 4.0.12
       '@tailwindcss/oxide': 4.0.12
       lightningcss: 1.29.2
       tailwindcss: 4.0.12
-      vite: 6.2.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.85.0)(yaml@2.7.0)
+      vite: 6.2.1(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.85.0)(yaml@2.7.0)
 
   '@trysound/sax@0.2.0': {}
 
@@ -5210,11 +5213,14 @@ snapshots:
 
   '@types/eslint@9.6.1':
     dependencies:
-      '@types/estree': 1.0.6
+      '@types/estree': 1.0.7
       '@types/json-schema': 7.0.15
     optional: true
 
   '@types/estree@1.0.6': {}
+
+  '@types/estree@1.0.7':
+    optional: true
 
   '@types/hast@3.0.4':
     dependencies:
@@ -5879,7 +5885,7 @@ snapshots:
 
   csstype@3.1.3: {}
 
-  daisyui@5.0.0: {}
+  daisyui@5.0.9: {}
 
   damerau-levenshtein@1.0.8: {}
 
